@@ -7,6 +7,15 @@ root.geometry("570x600+100+200")
 root.resizable(False,False)
 root.configure(bg="#17161b")
 
+equation = ""
+
+def show(value):
+        global equation
+        equation+=value
+        label_result.config(text=equation)
+
+
+
 
 Button(root,text="C",width=5,height=1,font=("arial",30,"bold"), bd=1,fg="#fff",bg="#3697f5",command=lambda: clear()).place(x=10,y=100)
 Button(root,text="/",width=5,height=1,font=("arial",30,"bold"), bd=1,fg="#fff",bg="#2a2d36",command=lambda: show("/")).place(x=150,y=100)
